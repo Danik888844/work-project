@@ -17,12 +17,12 @@ import { MatIconModule } from '@angular/material/icon';
 export class ItemsTableComponent {
   constructor(public dialog: MatDialog) { }
 
-  displayedColumns: string[] = ['id', 'title', 'amount', 'price', 'delete'];
+  displayedColumns: string[] = ['id', 'title', 'amount', 'price', 'actions'];
   dataSource: IProduct[] = jsonArray;
 
   @ViewChild(MatTable) table!: MatTable<IProduct>;
 
-  openDialog(): void {
+  onCreate(): void {
     const dialogRef = this.dialog.open(ProductFormComponent);
 
     dialogRef.afterClosed().subscribe(result => {
@@ -31,5 +31,15 @@ export class ItemsTableComponent {
         this.table.renderRows();
       }
     });
+  }
+
+  onView(product: IProduct): void {
+    this.dialog.open(ProductFormComponent, {
+      data: product
+    })
+  }
+
+  onDelete(id: string) {
+    this.dataSource = this.dataSource.filter(item => item.id !== id);
   }
 }

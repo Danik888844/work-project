@@ -6,6 +6,16 @@ table {
     margin-bottom: 10px;
 }
 
+.btn-view {
+    margin-right: 5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.btn-view:hover {
+    border: 1px solid #c6cfd3;
+}
+
 .btn-delete {
     background-color: transparent;
     border: 1px solid transparent;

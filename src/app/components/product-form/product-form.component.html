@@ -1,22 +1,23 @@
-<h2 mat-dialog-title>Добавить новый элемент</h2>
+<h2 mat-dialog-title>{{isView ? 'Просмотр элемента' : 'Добавить новый элемент'}}</h2>
 <mat-dialog-content>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <mat-form-field class="full-width">
-            <mat-label>Code</mat-label>
-            <input matInput formControlName="id" required>
+            <mat-label>Код</mat-label>
+            <input matInput formControlName="id" [readonly]="isView" required>
         </mat-form-field>
         <mat-form-field class="full-width">
-            <mat-label>Title</mat-label>
-            <input matInput formControlName="title" required>
+            <mat-label>Название</mat-label>
+            <input matInput formControlName="title" [readonly]="isView" required>
         </mat-form-field>
         <mat-form-field class="full-width">
-            <mat-label>Amount</mat-label>
-            <input matInput formControlName="amount" required>
+            <mat-label>Количество</mat-label>
+            <input matInput formControlName="amount" [readonly]="isView" required>
         </mat-form-field>
         <mat-form-field class="full-width">
-            <mat-label>Price</mat-label>
-            <input matInput formControlName="price" required>
+            <mat-label>Цена</mat-label>
+            <input matInput formControlName="price" [readonly]="isView" required>
         </mat-form-field>
-        <button mat-button type="submit" [disabled]="form.invalid">Добавить</button>
+        <button mat-button *ngIf="!isView" type="submit" [disabled]="form.invalid">Добавить</button>
+        <button mat-button (click)="onNoClick()">Отмена</button>
     </form>
 </mat-dialog-content>
