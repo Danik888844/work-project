@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Добавить новый элемент</h2>
+<mat-dialog-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field class="full-width">
+            <mat-label>Code</mat-label>
+            <input matInput formControlName="id" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>Amount</mat-label>
+            <input matInput formControlName="amount" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>Price</mat-label>
+            <input matInput formControlName="price" required>
+        </mat-form-field>
+        <button mat-button type="submit" [disabled]="form.invalid">Добавить</button>
+    </form>
+</mat-dialog-content>

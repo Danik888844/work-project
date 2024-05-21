@@ -1,0 +1,62 @@
+[
+    {
+        "id": "A1",
+        "title": "Спички",
+        "amount": 10,
+        "price": 200
+    },
+    {
+        "id": "B1",
+        "title": "Крем",
+        "amount": 1,
+        "price": 1200
+    },
+    {
+        "id": "C1",
+        "title": "Мягкий корм",
+        "amount": 2,
+        "price": 500
+    },
+    {
+        "id": "D1",
+        "title": "Кофе",
+        "amount": 1,
+        "price": 2000
+    },
+    {
+        "id": "E1",
+        "title": "Жвачка",
+        "amount": 5,
+        "price": 300
+    },
+    {
+        "id": "F1",
+        "title": "Бумага",
+        "amount": 1,
+        "price": 350
+    },
+    {
+        "id": "F2",
+        "title": "Тетради",
+        "amount": 20,
+        "price": 700
+    },
+    {
+        "id": "F3",
+        "title": "Степлер",
+        "amount": 1,
+        "price": 1500
+    },
+    {
+        "id": "D2",
+        "title": "Молоко",
+        "amount": 1,
+        "price": 800
+    },
+    {
+        "id": "E2",
+        "title": "Пельмени",
+        "amount": 1,
+        "price": 1100
+    }
+]
