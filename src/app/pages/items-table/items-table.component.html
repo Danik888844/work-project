@@ -1,5 +1,5 @@
 <div class="tab-header">
-    <button mat-raised-button (click)="onCreate()">Добавить элемент</button>
+    <button mat-raised-button (click)="onCreate()">Add element</button>
 </div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -9,17 +9,17 @@
     </ng-container>
 
     <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef> Название </th>
+        <th mat-header-cell *matHeaderCellDef> Title </th>
         <td mat-cell *matCellDef="let element"> {{element.title}} </td>
     </ng-container>
 
     <ng-container matColumnDef="amount">
-        <th mat-header-cell *matHeaderCellDef> Кол-во </th>
+        <th mat-header-cell *matHeaderCellDef> Amount </th>
         <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
     </ng-container>
 
     <ng-container matColumnDef="price">
-        <th mat-header-cell *matHeaderCellDef> Цена </th>
+        <th mat-header-cell *matHeaderCellDef> Price </th>
         <td mat-cell *matCellDef="let element"> {{element.price}} </td>
     </ng-container>
 
