@@ -5,3 +5,12 @@ table {
 .tab-header {
     margin-bottom: 10px;
 }
+
+.btn-delete {
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.btn-delete:hover {
+    border: 1px solid #da3030;
+}

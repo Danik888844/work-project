@@ -5,18 +5,19 @@ import { IProduct } from '../../types/product.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductFormComponent } from '../../components/product-form/product-form.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-items-table',
   styleUrl: './items-table.component.scss',
   templateUrl: './items-table.component.html',
   standalone: true,
-  imports: [MatTableModule, MatButtonModule],
+  imports: [MatTableModule, MatButtonModule, MatIconModule],
 })
 export class ItemsTableComponent {
   constructor(public dialog: MatDialog) { }
 
-  displayedColumns: string[] = ['id', 'title', 'amount', 'price'];
+  displayedColumns: string[] = ['id', 'title', 'amount', 'price', 'delete'];
   dataSource: IProduct[] = jsonArray;
 
   @ViewChild(MatTable) table!: MatTable<IProduct>;
