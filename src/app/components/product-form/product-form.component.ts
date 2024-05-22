@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { IProduct } from '../../types/product.interface';
+import { uniqueIdValidator } from '../../helpers/unique-id.validator';
 
 @Component({
   selector: 'app-product-form',
@@ -27,7 +28,7 @@ export class ProductFormComponent {
   ) {
     this.isView = data ? true : false;
     this.form = this.fb.group({
-      id: [{ value: data?.id || '', disabled: this.isView }, Validators.required],
+      id: [{ value: data?.id || '', disabled: this.isView }, [Validators.required, uniqueIdValidator()]],
       title: [{ value: data?.title || '', disabled: this.isView }, Validators.required],
       amount: [{ value: data?.amount || '', disabled: this.isView }, Validators.required],
       price: [{ value: data?.price || '', disabled: this.isView }, Validators.required]
